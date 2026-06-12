@@ -1,0 +1,151 @@
+/* ═══════════════════════════════════════════════
+   layout.css — Page Layout & Section Structure
+═══════════════════════════════════════════════ */
+
+/* ── Container ── */
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+}
+
+/* ── Sections ── */
+section {
+  position: relative;
+  z-index: var(--z-content);
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-nav);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: var(--section-x);
+  height: var(--nav-height);
+  background: rgba(10, 10, 15, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--color-border);
+  transition: background var(--transition-base);
+}
+
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--nav-height) var(--section-x) 60px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-inner {
+  max-width: 860px;
+  position: relative;
+  z-index: var(--z-content);
+}
+
+/* ── ABOUT ── */
+#about {
+  padding: var(--section-y) var(--section-x);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+/* ── MARQUEE SECTION ── */
+.marquee-section {
+  padding: var(--space-12) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg2);
+  overflow: hidden;
+  position: relative;
+  z-index: var(--z-content);
+}
+
+.marquee-track {
+  overflow: hidden;
+}
+
+/* ── SKILLS ── */
+#skills {
+  padding: var(--section-y) var(--section-x);
+  background: var(--color-bg2);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-5);
+}
+
+/* ── PROJECTS ── */
+#projects {
+  padding: var(--section-y) var(--section-x);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-6);
+}
+
+/* ── CONTACT ── */
+#contact {
+  padding: var(--section-y) var(--section-x);
+  position: relative;
+}
+
+.contact-inner {
+  max-width: 620px;
+  margin-inline: auto;
+  text-align: center;
+  position: relative;
+  z-index: var(--z-content);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-8) var(--section-x);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: var(--z-content);
+}
+
+/* ── MAIN ── */
+main {
+  position: relative;
+  z-index: var(--z-content);
+}

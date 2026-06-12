@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio — Desarrollador Full-Stack especializado en Next.js, React y Tailwind CSS." />
+  <meta name="theme-color" content="#0A0A0F" />
+  <title>Enrique Manzanas</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/tokens.css"/>
+  <link rel="stylesheet" href="css/reset.css"/>
+  <link rel="stylesheet" href="css/layout.css"/>
+  <link rel="stylesheet" href="css/components.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="nav-logo" aria-label="Inicio">
+      <span class="bracket">{</span>Enrique<span class="accent">.</span>Manzanas<span class="bracket">}</span>
+    </div>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+
+    <button class="nav-cta" onclick="scrollTo('contact')" aria-label="Ir a sección de contacto">
+      Contáctame →
+    </button>
+
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+    <button class="mobile-close" onclick="toggleMenu()" aria-label="Cerrar menú">✕</button>
+    <a href="#about"    onclick="toggleMenu()">Sobre mí</a>
+    <a href="#skills"   onclick="toggleMenu()">Skills</a>
+    <a href="#projects" onclick="toggleMenu()">Proyectos</a>
+    <a href="#contact"  onclick="toggleMenu()">Contacto</a>
+  </div>
+
+  <main>
+    <!-- ═══════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════ -->
+    <section id="hero" aria-label="Introducción">
+      <div class="orb orb-1" aria-hidden="true"></div>
+      <div class="orb orb-2" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <div class="hero-badge" aria-label="Estado: disponible para proyectos">
+          <span class="badge-dot" aria-hidden="true">●</span>
+          Disponible para proyectos
+        </div>
+
+        <h1 class="hero-headline">
+          Construyo experiencias<br />
+          <span class="gradient-text">digitales que importan</span>
+        </h1>
+
+        <div class="typewriter-wrap" aria-live="polite" aria-label="Rol actual">
+          <span class="prefix" aria-hidden="true">$&gt;</span>
+          <span id="typed"></span><span class="cursor" aria-hidden="true"></span>
+        </div>
+
+        <p class="hero-desc">
+          Desarrollador Full-Stack especializado en crear interfaces modernas,
+          escalables y rápidas. Apasionado por el diseño de sistemas y la experiencia de usuario.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="scrollTo('projects')">
+            Ver proyectos &nbsp;↓
+          </button>
+          <button class="btn-outline" onclick="scrollTo('contact')">
+            📫 &nbsp;Hablemos
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        Scroll
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         ABOUT
+    ═══════════════════════════════════════ -->
+    <section id="about" aria-label="Sobre mí">
+      <div class="about-grid container">
+
+        <div class="about-text reveal">
+          <p class="section-label">// sobre_mi</p>
+          <h2 class="section-title">Un desarrollador que piensa en diseño</h2>
+          <p>Hola, soy <strong>Enrique</strong>, un desarrollador Full-Stack con más de <strong>5 años de experiencia</strong> construyendo productos digitales desde cero hasta producción.</p>
+          <p>Me especializo en el ecosistema <strong>React / Next.js</strong>, con un ojo puesto siempre en el rendimiento y la accesibilidad. Creo que el mejor código es aquel que no se nota: simplemente funciona, fluidamente.</p>
+          <p>Cuando no estoy programando, suelo explorar nuevas tecnologías, contribuir a proyectos open source y tomar demasiado café ☕</p>
+        </div>
+
+        <div class="about-stats reveal reveal-delay-2">
+          <div class="stat-card">
+            <div class="stat-num">5+</div>
+            <div class="stat-label">Años de experiencia</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">40+</div>
+            <div class="stat-label">Proyectos entregados</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">15+</div>
+            <div class="stat-label">Clientes satisfechos</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">∞</div>
+            <div class="stat-label">Curiosidad</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         STACK MARQUEE
+    ═══════════════════════════════════════ -->
+    <div class="marquee-section" aria-label="Tecnologías" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-wrap" id="marqueeTrack">
+          <span class="marquee-item"><span class="marquee-icon">⚛️</span> React</span>
+          <span class="marquee-item"><span class="marquee-icon">▲</span> Next.js</span>
+          <span class="marquee-item"><span class="marquee-icon">💨</span> Tailwind CSS</span>
+          <span class="marquee-item"><span class="marquee-icon">🎞</span> Framer Motion</span>
+          <span class="marquee-item"><span class="marquee-icon">🟦</span> TypeScript</span>
+          <span class="marquee-item"><span class="marquee-icon">🟢</span> Node.js</span>
+          <span class="marquee-item"><span class="marquee-icon">🐘</span> PostgreSQL</span>
+          <span class="marquee-item"><span class="marquee-icon">🔷</span> Prisma</span>
+          <span class="marquee-item"><span class="marquee-icon">☁️</span> AWS</span>
+          <span class="marquee-item"><span class="marquee-icon">🐳</span> Docker</span>
+          <span class="marquee-item"><span class="marquee-icon">🔴</span> Redis</span>
+          <span class="marquee-item"><span class="marquee-icon">🌊</span> Supabase</span>
+          <!-- Duplicate for seamless loop -->
+          <span class="marquee-item"><span class="marquee-icon">⚛️</span> React</span>
+          <span class="marquee-item"><span class="marquee-icon">▲</span> Next.js</span>
+          <span class="marquee-item"><span class="marquee-icon">💨</span> Tailwind CSS</span>
+          <span class="marquee-item"><span class="marquee-icon">🎞</span> Framer Motion</span>
+          <span class="marquee-item"><span class="marquee-icon">🟦</span> TypeScript</span>
+          <span class="marquee-item"><span class="marquee-icon">🟢</span> Node.js</span>
+          <span class="marquee-item"><span class="marquee-icon">🐘</span> PostgreSQL</span>
+          <span class="marquee-item"><span class="marquee-icon">🔷</span> Prisma</span>
+          <span class="marquee-item"><span class="marquee-icon">☁️</span> AWS</span>
+          <span class="marquee-item"><span class="marquee-icon">🐳</span> Docker</span>
+          <span class="marquee-item"><span class="marquee-icon">🔴</span> Redis</span>
+          <span class="marquee-item"><span class="marquee-icon">🌊</span> Supabase</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         SKILLS
+    ═══════════════════════════════════════ -->
+    <section id="skills" aria-label="Habilidades técnicas">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">// stack_principal</p>
+          <h2 class="section-title">Tecnologías que domino</h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal" data-fill="95">
+            <div class="skill-icon" aria-hidden="true">⚛️</div>
+            <h3 class="skill-name">React / Next.js</h3>
+            <p class="skill-desc">SPA, SSR, SSG, App Router, Server Components. Mi entorno natural para construir UIs complejas y eficientes.</p>
+            <div class="skill-bar-bg" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel React/Next.js: 95%">
+              <div class="skill-bar-fill"></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal reveal-delay-1" data-fill="90">
+            <div class="skill-icon" aria-hidden="true">🟦</div>
+            <h3 class="skill-name">TypeScript</h3>
+            <p class="skill-desc">Tipado estático que evita errores antes de que sucedan. Uso TS en todos mis proyectos, front y back.</p>
+            <div class="skill-bar-bg" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel TypeScript: 90%">
+              <div class="skill-bar-fill"></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal reveal-delay-2" data-fill="88">
+            <div class="skill-icon" aria-hidden="true">💨</div>
+            <h3 class="skill-name">Tailwind CSS</h3>
+            <p class="skill-desc">Utility-first CSS para interfaces rápidas, consistentes y altamente customizables sin salir del HTML.</p>
+            <div class="skill-bar-bg" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel Tailwind CSS: 88%">
+              <div class="skill-bar-fill"></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal" data-fill="82">
+            <div class="skill-icon" aria-hidden="true">🟢</div>
+            <h3 class="skill-name">Node.js / Express</h3>
+            <p class="skill-desc">APIs REST y GraphQL, autenticación JWT/OAuth, websockets y microservicios productivos.</p>
+            <div class="skill-bar-bg" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel Node.js: 82%">
+              <div class="skill-bar-fill"></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal reveal-delay-1" data-fill="78">
+            <div class="skill-icon" aria-hidden="true">🐘</div>
+            <h3 class="skill-name">PostgreSQL / Prisma</h3>
+            <p class="skill-desc">Modelado relacional sólido, consultas optimizadas y migraciones controladas con Prisma ORM.</p>
+            <div class="skill-bar-bg" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel PostgreSQL: 78%">
+              <div class="skill-bar-fill"></div>
+            </div>
+          </article>
+
+          <article class="skill-card reveal reveal-delay-2" data-fill="75">
+            <div class="skill-icon" aria-hidden="true">☁️</div>
+            <h3 class="skill-name">DevOps & Cloud</h3>
+            <p class="skill-desc">CI/CD con GitHub Actions, containerización con Docker y despliegues en AWS, Vercel y Railway.</p>
+            <div class="skill-bar-bg" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel DevOps: 75%">
+              <div class="skill-bar-fill"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         PROJECTS
+    ═══════════════════════════════════════ -->
+    <section id="projects" aria-label="Proyectos">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-label">// proyectos_destacados</p>
+          <h2 class="section-title">Cosas que construí</h2>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card reveal">
+            <div class="project-img project-img-1" aria-hidden="true">🛒
+              <div class="project-img-overlay"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">Stripe</span>
+                <span class="tag tag-cyan">TypeScript</span>
+              </div>
+              <h3 class="project-name">ShopFlow — E-commerce Platform</h3>
+              <p class="project-desc">Plataforma de comercio electrónico completa con carrito persistente, pagos con Stripe, panel de administración y análisis en tiempo real.</p>
+              <div class="project-links">
+                <a class="project-link project-link-primary" href="#" aria-label="Ver demo de ShopFlow">Demo →</a>
+                <a class="project-link" href="#" aria-label="Código fuente de ShopFlow en GitHub">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal-delay-1">
+            <div class="project-img project-img-2" aria-hidden="true">💬
+              <div class="project-img-overlay"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">React</span>
+                <span class="tag tag-cyan">WebSockets</span>
+                <span class="tag">Redis</span>
+              </div>
+              <h3 class="project-name">NexTalk — Chat en Tiempo Real</h3>
+              <p class="project-desc">Aplicación de mensajería con salas, mensajes directos, indicadores de escritura y notificaciones push mediante WebSockets y Redis Pub/Sub.</p>
+              <div class="project-links">
+                <a class="project-link project-link-primary" href="#" aria-label="Ver demo de NexTalk">Demo →</a>
+                <a class="project-link" href="#" aria-label="Código fuente de NexTalk en GitHub">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal-delay-2">
+            <div class="project-img project-img-3" aria-hidden="true">📊
+              <div class="project-img-overlay"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">Next.js</span>
+                <span class="tag tag-green">Prisma</span>
+                <span class="tag tag-cyan">Recharts</span>
+              </div>
+              <h3 class="project-name">DataLens — Dashboard Analytics</h3>
+              <p class="project-desc">Panel analítico con visualizaciones dinámicas, filtros avanzados y exportación de reportes. Procesa más de 1M de registros con paginación virtualizada.</p>
+              <div class="project-links">
+                <a class="project-link project-link-primary" href="#" aria-label="Ver demo de DataLens">Demo →</a>
+                <a class="project-link" href="#" aria-label="Código fuente de DataLens en GitHub">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-img project-img-4" aria-hidden="true">🤖
+              <div class="project-img-overlay"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag">Next.js</span>
+                <span class="tag tag-cyan">OpenAI API</span>
+                <span class="tag">Supabase</span>
+              </div>
+              <h3 class="project-name">BrainMate — AI Study Assistant</h3>
+              <p class="project-desc">Asistente de estudio potenciado por IA: genera resúmenes, crea flashcards automáticamente y responde preguntas sobre documentos PDF cargados por el usuario.</p>
+              <div class="project-links">
+                <a class="project-link project-link-primary" href="#" aria-label="Ver demo de BrainMate">Demo →</a>
+                <a class="project-link" href="#" aria-label="Código fuente de BrainMate en GitHub">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CONTACT
+    ═══════════════════════════════════════ -->
+    <section id="contact" aria-label="Contacto">
+      <div class="contact-glow" aria-hidden="true"></div>
+      <div class="contact-inner container reveal">
+        <p class="section-label">// contacto</p>
+        <h2 class="section-title">¿Tienes un proyecto en mente?</h2>
+        <p class="contact-desc">Estoy abierto a colaboraciones, freelance y posiciones full-time. Cuéntame qué estás construyendo.</p>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" placeholder="Tu nombre" required autocomplete="name" />
+              <span class="form-error" id="name-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required autocomplete="email" />
+              <span class="form-error" id="email-error"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Asunto</label>
+            <input type="text" id="subject" name="subject" placeholder="¿Sobre qué quieres hablar?" required />
+            <span class="form-error" id="subject-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" placeholder="Cuéntame tu proyecto o idea..." required></textarea>
+            <span class="form-error" id="message-error"></span>
+          </div>
+          <button type="submit" class="form-submit">
+            <span class="btn-text">Enviar mensaje &nbsp;🚀</span>
+            <span class="btn-loading" hidden>Enviando…</span>
+          </button>
+        </form>
+
+        <div class="social-links" aria-label="Redes sociales">
+          <a class="social-link" href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a class="social-link" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a class="social-link" href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a class="social-link" href="mailto:dev@portfolio.com" aria-label="Enviar email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <p>© 2025 <span class="mono-accent">dev.portfolio</span> — Hecho con ☕ y muchos commits</p>
+    <p class="footer-version">v2.0.0 — Next.js · React · Tailwind</p>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Scripts -->
+  <script src="js/utils.js"></script>
+  <script src="js/typewriter.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* ═══════════════════════════════════════════════
+   responsive.css — Breakpoints & Mobile Styles
+═══════════════════════════════════════════════ */
+
+/* ─────────────────────────────────────────────
+   TABLET  (≤ 900px)
+───────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin-inline: auto;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   MOBILE  (≤ 768px)
+───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Nav */
+  .nav-links,
+  .nav-cta       { display: none; }
+  .hamburger     { display: flex; }
+
+  /* Hero */
+  .hero-actions  { flex-direction: column; align-items: center; }
+  .btn-primary,
+  .btn-outline   { width: 100%; max-width: 280px; justify-content: center; }
+
+  /* About stats */
+  .about-stats   { grid-template-columns: 1fr 1fr; }
+
+  /* Skills */
+  .skills-grid   { grid-template-columns: 1fr; }
+
+  /* Contact form */
+  .form-row      { grid-template-columns: 1fr; }
+
+  /* Footer */
+  footer {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  /* Toast */
+  .toast {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    text-align: center;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   SMALL MOBILE  (≤ 480px)
+───────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .about-stats { grid-template-columns: 1fr; }
+
+  .hero-headline { letter-spacing: -0.03em; }
+
+  .stat-card { padding: 1.25rem; }
+
+  .skill-card { padding: 1.25rem; }
+
+  .project-body { padding: 1.25rem; }
+
+  .social-links { gap: 0.75rem; }
+}
+
+/* ─────────────────────────────────────────────
+   LARGE DESKTOP  (≥ 1400px)
+───────────────────────────────────────────── */
+@media (min-width: 1400px) {
+  .skills-grid   { grid-template-columns: repeat(3, 1fr); }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ─────────────────────────────────────────────
+   HIGH CONTRAST / PRINT
+───────────────────────────────────────────── */
+@media print {
+  nav, .hero-scroll, .mobile-menu, .toast { display: none; }
+  body { background: white; color: black; }
+  .gradient-text { -webkit-text-fill-color: #7C3AED; }
+}
