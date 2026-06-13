@@ -27,6 +27,14 @@
   --color-green-bg:     rgba(34, 197, 94, 0.10);
   --color-green-border: rgba(34, 197, 94, 0.20);
 
+   --color-orange:        #ea580c;
+  --color-orange-bg:     rgba(234, 88, 12, 0.10);
+  --color-orange-border: rgba(234, 88, 12, 0.20);
+
+   --color-yellow:        #eab308;
+  --color-yellow-bg:     rgba(234, 179, 8, 0.10);
+  --color-yellow-border: rgba(234, 179, 8, 0.20);
+
   --color-white:        #F8FAFC;
   --color-muted:        #94A3B8;
   --color-muted2:       #64748B;

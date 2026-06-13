@@ -514,6 +514,18 @@
   border-color: var(--color-green-border);
 }
 
+.tag-orange {
+  background: var(--color-orange-bg);
+  color: var(--color-orange);
+  border-color: var(--color-orange-border);
+}
+
+.tag-yellow {
+  background: var(--color-yellow-bg);
+  color: var(--color-yellow);
+  border-color: var(--color-yellow-border);
+}
+
 .project-name {
   font-weight: 700;
   font-size: var(--text-lg);
