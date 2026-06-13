@@ -8,10 +8,12 @@
  * Smooth-scroll to a section by id.
  * @param {string} id - The section id (without #)
  */
-function scrollTo(id) {
+function scrollToSection(id) {
   const el = document.getElementById(id);
   if (el) el.scrollIntoView({ behavior: 'smooth' });
 }
+
+window.scrollToSection = scrollToSection;
 
 /**
  * Show the toast notification with a given message.
