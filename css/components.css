@@ -543,6 +543,12 @@
   border-color: var(--color-yellow-border);
 }
 
+.tag-blue {
+  background: rgba(55, 118, 171, 0.12);
+  color: #4B9CD3;
+  border-color: rgba(55, 118, 171, 0.28);
+}
+
 .project-name {
   font-weight: 700;
   font-size: var(--text-lg);
