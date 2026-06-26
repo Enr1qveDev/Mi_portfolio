@@ -109,96 +109,114 @@
     </section>
 
     <!-- STACK MARQUEE -->
-    <div class="marquee-section" aria-label="Tecnologías" aria-hidden="true">
-      <div class="marquee-track">
-        <div class="marquee-wrap" id="marqueeTrack">
+    <div class="marquee-section" aria-label="Tecnologías" aria-hidden="true" style="overflow: hidden; width: 100%;">
+      <!-- El ID pasa al contenedor que agrupa todo para calcular su ancho real -->
+      <div class="marquee-track" id="marqueeTrack" style="display: flex; white-space: nowrap; width: max-content; gap: 3rem;">
 
-          <!-- CAMBIAR Y ARREGLAR
+        <!-- CAMBIAR Y ARREGLAR
+          <span class="marquee-item"><span class="marquee-icon"></span>HTML</span>
+          <span class="marquee-item"><span class="marquee-icon"></span>CSS</span>
+          <span class="marquee-item"><span class="marquee-icon"></span>JavaScript</span>
+          <span class="marquee-item"><span class="marquee-icon"></span>PHP</span>
+          <span class="marquee-item"><span class="marquee-icon"></span> TypeScript</span>
+          <span class="marquee-item"><span class="marquee-icon"></span> Node.js</span>
+          <span class="marquee-item"><span class="marquee-icon"></span> PostgreSQL</span>
+          <span class="marquee-item"><span class="marquee-icon"></span> Prisma</span>
+          <span class="marquee-item"><span class="marquee-icon"></span> AWS</span>
+          <span class="marquee-item"><span class="marquee-icon"></span> Docker</span>
+          <span class="marquee-item"><span class="marquee-icon"></span> Redis</span>
+          <span class="marquee-item"><span class="marquee-icon"></span> Supabase</span>
+          -->
 
-          <span class="marquee-item"><span class="marquee-icon">⚛️</span> React</span>
-          <span class="marquee-item"><span class="marquee-icon">▲</span> Next.js</span>
-          <span class="marquee-item"><span class="marquee-icon">💨</span> Tailwind CSS</span>
-          <span class="marquee-item"><span class="marquee-icon">🎞</span> Framer Motion</span>
-          <span class="marquee-item"><span class="marquee-icon">🟦</span> TypeScript</span>
-          <span class="marquee-item"><span class="marquee-icon">🟢</span> Node.js</span>
-          <span class="marquee-item"><span class="marquee-icon">🐘</span> PostgreSQL</span>
-          <span class="marquee-item"><span class="marquee-icon">🔷</span> Prisma</span>
-          <span class="marquee-item"><span class="marquee-icon">☁️</span> AWS</span>
-          <span class="marquee-item"><span class="marquee-icon">🐳</span> Docker</span>
-          <span class="marquee-item"><span class="marquee-icon">🔴</span> Redis</span>
-          <span class="marquee-item"><span class="marquee-icon">🌊</span> Supabase</span>
-
-          <!-- Duplicate for seamless loop
-          <span class="marquee-item"><span class="marquee-icon">⚛️</span> React</span>
-          <span class="marquee-item"><span class="marquee-icon">▲</span> Next.js</span>
-          <span class="marquee-item"><span class="marquee-icon">💨</span> Tailwind CSS</span>
-          <span class="marquee-item"><span class="marquee-icon">🎞</span> Framer Motion</span>
-          <span class="marquee-item"><span class="marquee-icon">🟦</span> TypeScript</span>
-          <span class="marquee-item"><span class="marquee-icon">🟢</span> Node.js</span>
-          <span class="marquee-item"><span class="marquee-icon">🐘</span> PostgreSQL</span>
-          <span class="marquee-item"><span class="marquee-icon">🔷</span> Prisma</span>
-          <span class="marquee-item"><span class="marquee-icon">☁️</span> AWS</span>
-          <span class="marquee-item"><span class="marquee-icon">🐳</span> Docker</span>
-          <span class="marquee-item"><span class="marquee-icon">🔴</span> Redis</span>
-          <span class="marquee-item"><span class="marquee-icon">🌊</span> Supabase</span>
+          <!--Duplicate for seamless
+          <span class="marquee-item"><span class="marquee-icon"></span>HTML</span>
+          <span class="marquee-item"><span class="marquee-icon"></span>CSS</span>
+          <span class="marquee-item"><span class="marquee-icon"></span>JavaScript</span>
+          <span class="marquee-item"><span class="marquee-icon"></span>PHP</span>
+          <span class="marquee-item"><span class="marquee-icon"></span> TypeScript</span>
+          <span class="marquee-item"><span class="marquee-icon"></span> Node.js</span>
+          <span class="marquee-item"><span class="marquee-icon"></span> PostgreSQL</span>
+          <span class="marquee-item"><span class="marquee-icon"></span> Prisma</span>
+          <span class="marquee-item"><span class="marquee-icon"></span> AWS</span>
+          <span class="marquee-item"><span class="marquee-icon"></span> Docker</span>
+          <span class="marquee-item"><span class="marquee-icon"></span> Redis</span>
+          <span class="marquee-item"><span class="marquee-icon"></span> Supabase</span>
           -->
         </div>
       </div>
     </div>
 
     <!-- SKILLS -->
-    <section id="skills" aria-label="Habilidades técnicas">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="section-label">// stack_principal</p>
-          <h2 class="section-title">Tecnologías que domino</h2>
-        </div>
+<section id="skills" aria-label="Habilidades técnicas">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-label">// stack_principal</p>
+      <h2 class="section-title">Tecnologías que domino<br/>
+        y<br/>
+        <span class="gradient-text">Habilidades Clave</span>
+      </h2>
+    </div>
+    
+    <!-- BLOQUE 1: TECNOLOGÍAS -->
+    <div class="skills-group" style="margin-bottom: 3rem;">
+      <h3 class="skills-subtitle" style="font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 1.5rem;">Tecnologías</h3>
+      
+      <div class="skills-grid">
+        <!-- FRONTEND -->
+        <article class="skill-card reveal" data-fill="95">
+          <h3 class="skill-name">HTML, CSS, JavaScript</h3>
+          <p class="skill-desc">Fundamentos del desarrollo web moderno. Los utilizo para crear interfaces rápidas, intuitivas y adaptables.</p>
+          <div class="skill-bar-bg" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel HTML, CSS, JavaScript: 95%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </article>
 
-        <div class="skills-grid">
-          <article class="skill-card reveal" data-fill="95">
-            <h3 class="skill-name">HTML, CSS, JavaScript</h3>
-            <p class="skill-desc">Fundamentos del desarrollo web moderno. Los utilizo para crear interfaces rápidas, intuitivas y adaptables.</p>
-            <div class="skill-bar-bg" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel React/Next.js: 95%">
-              <div class="skill-bar-fill"></div>
-            </div>
-          </article>
+        <!-- BACKEND -->
+        <article class="skill-card reveal reveal-delay-1" data-fill="90">
+          <div class="skill-icon" aria-hidden="true"></div>
+          <h3 class="skill-name">PHP</h3>
+          <p class="skill-desc">Bases de POO (Programación Orientada a Objetos) y desarrollo del lado del servidor para aplicaciones dinámicas.</p>
+          <div class="skill-bar-bg" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel PHP: 90%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </article>
+      </div>
 
-          <article class="skill-card reveal reveal-delay-1" data-fill="90">
-            <div class="skill-icon" aria-hidden="true"></div>
-            <h3 class="skill-name">PHP</h3>
-            <p class="skill-desc">Bases de POO (Programación Orientado a Objetos).</p>
-            <div class="skill-bar-bg" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel TypeScript: 90%">
-              <div class="skill-bar-fill"></div>
-            </div>
-          </article>
+    </div>
 
-          <article class="skill-card reveal reveal-delay-2" data-fill="88">
-            <div class="skill-icon" aria-hidden="true"></div>
-            <h3 class="skill-name">Tailwind CSS</h3>
-            <p class="skill-desc">Utility-first CSS para interfaces rápidas, consistentes y altamente customizables sin salir del HTML.</p>
-            <div class="skill-bar-bg" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel Tailwind CSS: 88%">
-              <div class="skill-bar-fill"></div>
-            </div>
-          </article>
+    <!-- BLOQUE 2: HABILIDADES CLAVE -->
+    <div class="skills-group">
+      <h3 class="skills-subtitle" style="font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 1.5rem;">Habilidades Clave</h3>
+      
+      <div class="skills-grid">
+        <!-- IA Y GIT -->
+        <article class="skill-card reveal reveal-delay-2" data-fill="88">
+          <div class="skill-icon" aria-hidden="true"></div>
+          <h3 class="skill-name">Herramientas & Entorno de Trabajo</h3>
+          <p class="skill-desc">Dominio de Git y GitHub Desktop para control de versiones eficiente. Integración experta de GitHub Copilot para acelerar flujos de desarrollo.</p>
+          <div class="skill-bar-bg" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel Herramientas: 88%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </article>
+        
+        <!-- CLEAN CODE -->
+        <article class="skill-card reveal" data-fill="82">
+          <div class="skill-icon" aria-hidden="true"></div>
+          <h3 class="skill-name">Clean Code & Buenas Prácticas</h3>
+          <p class="skill-desc">Enfoque en desarrollo moderno. Escritura de código limpio, accesible y semántico, priorizando el rendimiento y los estándares actuales de la industria.</p>
+          <div class="skill-bar-bg" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel Buenas Prácticas: 82%">
+            <div class="skill-bar-fill"></div>
+          </div>
+        </article>
+      </div>
 
-          <article class="skill-card reveal" data-fill="82">
-            <div class="skill-icon" aria-hidden="true"></div>
-            <h3 class="skill-name">Node.js / Express</h3>
-            <p class="skill-desc">APIs REST y GraphQL, autenticación JWT/OAuth, websockets y microservicios productivos.</p>
-            <div class="skill-bar-bg" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel Node.js: 82%">
-              <div class="skill-bar-fill"></div>
-            </div>
-          </article>
+    </div>
 
-          <article class="skill-card reveal reveal-delay-1" data-fill="78">
-            <div class="skill-icon" aria-hidden="true"></div>
-            <h3 class="skill-name">PostgreSQL / Prisma</h3>
-            <p class="skill-desc">Modelado relacional sólido, consultas optimizadas y migraciones controladas con Prisma ORM.</p>
-            <div class="skill-bar-bg" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel PostgreSQL: 78%">
-              <div class="skill-bar-fill"></div>
-            </div>
-          </article>
+  </div>
+</section>
 
+
+          <!---
           <article class="skill-card reveal reveal-delay-2" data-fill="75">
             <div class="skill-icon" aria-hidden="true"></div>
             <h3 class="skill-name">DevOps & Cloud</h3>
@@ -207,6 +225,7 @@
               <div class="skill-bar-fill"></div>
             </div>
           </article>
+          -->
         </div>
       </div>
     </section>
