@@ -114,3 +114,29 @@
 
   animate();
 })();
+
+/* ─────────────────────────────────────────────
+   SCROLL TO TOP — Floating Button
+───────────────────────────────────────────── */
+(function initScrollToTop() {
+  const btn = document.getElementById('scrollToTop');
+  if (!btn) return;
+
+  // 1. Mostrar/Ocultar el botón dependiendo del scroll
+  window.addEventListener('scroll', () => {
+    // Si el usuario baja más de 400px (la altura aproximada del Hero), el botón aparece
+    if (window.scrollY > 400) {
+      btn.classList.add('is-visible');
+    } else {
+      btn.classList.remove('is-visible');
+    }
+  }, { passive: true });
+
+  // 2. Acción de scroll suave hacia arriba al pulsar el botón
+  btn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+})();

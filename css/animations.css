@@ -74,3 +74,44 @@
     sets duration to 0.01ms which effectively
     disables them)
 ───────────────────────────────────────────── */
+
+/* Estilos base del botón flotante */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--accent, #7c3aed); /* Usa tu color de acento o el morado de tus proyectos */
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999; /* Asegura que flote por encima de las tarjetas y secciones */
+  
+  /* Animación de entrada suave controlada por JS */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease, background-color 0.2s;
+}
+
+/* Estado cuando se vuelve visible (clase que añade JS) */
+.scroll-to-top-btn.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Efecto hover discreto para PC */
+@media (hover: hover) {
+  .scroll-to-top-btn:hover {
+    background-color: #6d28d9; /* Un tono un poco más oscuro al pasar el ratón */
+  }
+}
