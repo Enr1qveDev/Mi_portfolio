@@ -3,14 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio — Desarrollador Full-Stack especializado en Next.js, React y Tailwind CSS." />
-  <meta name="theme-color" content="#0A0A0F" />
-  <title>Enrique Manzanas</title>
+  <meta name="description" content="Portfolio de Enrique Manzanas — futuro desarrollador Full-Stack, especializado en HTML, CSS, JavaScript y PHP, aplicando Prompt Engineering e IA generativa en sus proyectos." />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="author" content="Enrique Manzanas" />
+  <link rel="canonical" href="https://enr1qvedev.github.io/Mi_portfolio/" />
+  <title>Enrique Manzanas — Desarrollador Full-Stack</title>
+
+  <!-- Open Graph / Social previews -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Enrique Manzanas — Desarrollador Full-Stack" />
+  <meta property="og:description" content="Futuro desarrollador Full-Stack enfocado en interfaces modernas, rápidas y accesibles, aplicando Prompt Engineering e IA generativa." />
+  <meta property="og:image" content="https://enr1qvedev.github.io/Mi_portfolio/img/screenshot-portfolio.png" />
+  <meta property="og:url" content="https://enr1qvedev.github.io/Mi_portfolio/" />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Enrique Manzanas — Desarrollador Full-Stack" />
+  <meta name="twitter:description" content="Futuro desarrollador Full-Stack enfocado en interfaces modernas, rápidas y accesibles." />
+  <meta name="twitter:image" content="https://enr1qvedev.github.io/Mi_portfolio/img/screenshot-portfolio.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/tokens.css"/>
@@ -71,7 +88,7 @@
         </h1>
 
         <p class="hero-desc">
-          Futuro desarrollador Full-Stack enfocado en crear interfaces modernas, rápidas y accesibles. aplicando Prompt Engineering e IA generativa en proyectos en los que participo.
+          Futuro desarrollador Full-Stack enfocado en crear interfaces modernas, rápidas y accesibles, combinando buenas prácticas de desarrollo con Prompt Engineering e IA generativa.
         </p>
 
         <div class="hero-actions">
@@ -79,7 +96,7 @@
             Ver proyectos &nbsp;↓
           </button>
           <button class="btn-outline" onclick="scrollToSection('contact')">
-            📫 &nbsp;Hablemos
+            Hablemos &nbsp;↗
           </button>
         </div>
       </div>
@@ -91,69 +108,34 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" aria-label="Sobre mí">
+    <section id="about" class="theme-light" aria-label="Sobre mí">
       <div class="about-grid container">
 
         <div class="about-text reveal">
-          <p class="section-label">// sobre_mi</p>
-          <h2 class="section-title">Un desarrollador que piensa en diseño</h2>
-          <p>Hola, soy <strong>Enrique</strong>, un futuro desarrollador Full-Stack, aplicando Prompt Engineering e IA generativa.</p>
-          <p>En paralelo, estoy desarrollandome en diferentes ecosistemas y lenguajes del sector, con un ojo puesto siempre en el rendimiento y la accesibilidad.</p>
-        </div>
-          <div class="stat-card">
-            <div class="stat-num">5</div>
-            <div class="stat-label">Proyectos realizados</div>
+          <div class="section-head">
+            <span class="section-index">01</span>
+            <p class="section-label">sobre_mi</p>
           </div>
+          <h2 class="section-title">Un desarrollador que piensa en diseño</h2>
+          <p>Hola, soy <strong>Enrique</strong>, desarrollador Full-Stack en formación. Construyo interfaces web desde cero con HTML, CSS, JavaScript y PHP, y apoyo mi flujo de trabajo en Prompt Engineering e IA generativa.</p>
+          <p>Estoy ampliando constantemente mi stack hacia nuevos lenguajes y ecosistemas, con la mirada siempre puesta en el rendimiento, la accesibilidad y el código limpio.</p>
+        </div>
+        <div class="stat-card reveal reveal-delay-1">
+          <div class="stat-num">5</div>
+          <div class="stat-label">Proyectos realizados</div>
         </div>
       </div>
     </section>
 
-    <!-- STACK MARQUEE
-    <div class="marquee-section" aria-label="Tecnologías" aria-hidden="true" style="overflow: hidden; width: 100%;">
-    
-      El ID pasa al contenedor que agrupa todo para calcular su ancho real 
-      <div class="marquee-track" id="marqueeTrack" style="display: flex; white-space: nowrap; width: max-content; gap: 3rem;">
-
-
-          CAMBIAR Y ARREGLAR
-          <span class="marquee-item"><span class="marquee-icon"></span>HTML</span>
-          <span class="marquee-item"><span class="marquee-icon"></span>CSS</span>
-          <span class="marquee-item"><span class="marquee-icon"></span>JavaScript</span>
-          <span class="marquee-item"><span class="marquee-icon"></span>PHP</span>
-          <span class="marquee-item"><span class="marquee-icon"></span> TypeScript</span>
-          <span class="marquee-item"><span class="marquee-icon"></span> Node.js</span>
-          <span class="marquee-item"><span class="marquee-icon"></span> PostgreSQL</span>
-          <span class="marquee-item"><span class="marquee-icon"></span> Prisma</span>
-          <span class="marquee-item"><span class="marquee-icon"></span> AWS</span>
-          <span class="marquee-item"><span class="marquee-icon"></span> Docker</span>
-          <span class="marquee-item"><span class="marquee-icon"></span> Redis</span>
-          <span class="marquee-item"><span class="marquee-icon"></span> Supabase</span>
-          -->
-
-          <!--Duplicate for seamless
-          <span class="marquee-item"><span class="marquee-icon"></span>HTML</span>
-          <span class="marquee-item"><span class="marquee-icon"></span>CSS</span>
-          <span class="marquee-item"><span class="marquee-icon"></span>JavaScript</span>
-          <span class="marquee-item"><span class="marquee-icon"></span>PHP</span>
-          <span class="marquee-item"><span class="marquee-icon"></span> TypeScript</span>
-          <span class="marquee-item"><span class="marquee-icon"></span> Node.js</span>
-          <span class="marquee-item"><span class="marquee-icon"></span> PostgreSQL</span>
-          <span class="marquee-item"><span class="marquee-icon"></span> Prisma</span>
-          <span class="marquee-item"><span class="marquee-icon"></span> AWS</span>
-          <span class="marquee-item"><span class="marquee-icon"></span> Docker</span>
-          <span class="marquee-item"><span class="marquee-icon"></span> Redis</span>
-          <span class="marquee-item"><span class="marquee-icon"></span> Supabase</span>
-          
-        </div>
-      </div>
-    </div>
-    -->
 
     <!-- SKILLS -->
 <section id="skills" aria-label="Habilidades técnicas">
   <div class="container">
     <div class="section-header reveal">
-      <p class="section-label">// stack_principal</p>
+      <div class="section-head">
+        <span class="section-index">02</span>
+        <p class="section-label">stack_principal</p>
+      </div>
       <h2 class="section-title">Tecnologías<br/>
         y<br/>
         <span class="gradient-text">Habilidades Clave</span>
@@ -162,7 +144,7 @@
     
     <!-- BLOQUE 1: TECNOLOGÍAS -->
     <div class="skills-group" style="margin-bottom: 3rem;">
-      <h3 class="skills-subtitle" style="font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 1.5rem;">Tecnologías</h3>
+      <h3 class="skills-subtitle">Tecnologías</h3>
       
       <div class="skills-grid">
         <!-- FRONTEND -->
@@ -187,9 +169,10 @@
 
     </div>
 
+
     <!-- BLOQUE 2: HABILIDADES CLAVE -->
     <div class="skills-group">
-      <h3 class="skills-subtitle" style="font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 1.5rem;">Habilidades Clave</h3>
+      <h3 class="skills-subtitle">Habilidades Clave</h3>
       
       <div class="skills-grid">
         <!-- IA Y GIT -->
@@ -218,26 +201,14 @@
   </div>
 </section>
 
-
-          <!---
-          <article class="skill-card reveal reveal-delay-2" data-fill="75">
-            <div class="skill-icon" aria-hidden="true"></div>
-            <h3 class="skill-name">DevOps & Cloud</h3>
-            <p class="skill-desc">CI/CD con GitHub Actions, containerización con Docker y despliegues en AWS, Vercel y Railway.</p>
-            <div class="skill-bar-bg" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Nivel DevOps: 75%">
-              <div class="skill-bar-fill"></div>
-            </div>
-          </article>
-          -->
-        </div>
-      </div>
-    </section>
-
     <!-- PROJECTS -->
-    <section id="projects" aria-label="Proyectos">
+    <section id="projects" class="theme-light" aria-label="Proyectos">
       <div class="container">
         <div class="section-header reveal">
-          <p class="section-label">// proyectos_destacados</p>
+          <div class="section-head">
+            <span class="section-index">03</span>
+            <p class="section-label">proyectos_destacados</p>
+          </div>
           <h2 class="section-title">Cosas que voy construyendo</h2>
         </div>
 
@@ -245,7 +216,7 @@
 
           <article class="project-card reveal">
             <div class="project-img project-img-1 has-image"
-                 style="background-image: url('img/screenshot-portfolio.png');"
+                 data-bg="img/screenshot-portfolio.png"
                  aria-hidden="true">
               <div class="project-img-overlay"></div>
             </div>
@@ -271,7 +242,7 @@
 
           <article class="project-card reveal">
             <div class="project-img project-img-1 has-image"
-                 style="background-image: url('img/screenshot-cafeteria.png');"
+                 data-bg="img/screenshot-cafeteria.png"
                  aria-hidden="true">
               <div class="project-img-overlay"></div>
             </div>
@@ -300,7 +271,7 @@
 
           <article class="project-card reveal reveal-delay-1">
             <div class="project-img project-img-2 has-image"
-                 style="background-image: url('img/screenshot-uñas.png');"
+                 data-bg="img/screenshot-unas.png"
                  aria-hidden="true">
               <div class="project-img-overlay"></div>
             </div>
@@ -329,7 +300,7 @@
 
            <article class="project-card reveal reveal-delay-1">
             <div class="project-img project-img-2 has-image"
-             style="background-image: url('img/capturas-syshealth/dashboard.png'); background-position: center top;"
+             data-bg="img/capturas-syshealth/dashboard.png" style="background-position: center top;"
              aria-hidden="true">
               <div class="project-img-overlay"></div>
             </div>
@@ -338,7 +309,7 @@
                 <span class="tag tag-blue">Python</span>
               </div>
               <h3 class="project-name">SysHealth</h3>
-              <p class="project-desc">(Proyecto creado durante mis practicas)<br>
+              <p class="project-desc">(Proyecto creado durante mis prácticas)<br>
                 Herramienta de diagnóstico del sistema construida en Python con interfaz gráfica y CLI. Monitoriza CPU núcleo a núcleo, RAM, disco y red en tiempo real. 
                 Incluye análisis de archivos duplicados, gestión de procesos y herramientas de red avanzadas como ping, traceroute y escaneo de puertos.</p>
               <div class="project-links">
@@ -346,19 +317,19 @@
                    href="https://github.com/Enr1qveDev/SysHealth/releases/latest"
                    target="_blank"
                    rel="noopener noreferrer"
-                   aria-label="Ver demo de Plataforma Estética Corporativa">Demo →</a>
+                   aria-label="Ver demo de SysHealth">Demo →</a>
                 <a class="project-link"
                    href="https://github.com/Enr1qveDev/SysHealth"
                    target="_blank"
                    rel="noopener noreferrer"
-                   aria-label="Código fuente de Plataforma Estética en GitHub">GitHub</a>
+                   aria-label="Código fuente de SysHealth en GitHub">GitHub</a>
               </div>
             </div>
           </article>
 
           <article class="project-card reveal reveal-delay-1">
             <div class="project-img project-img-2 has-image"
-                 style="background-image: url('img/datalens-analytics.png');"
+                 data-bg="img/datalens-analytics.png"
                  aria-hidden="true">
               <div class="project-img-overlay"></div>
             </div>
@@ -377,19 +348,18 @@
                    href="https://enr1qvedev.github.io/Datalens-Analytics/"
                    target="_blank"
                    rel="noopener noreferrer"
-                   aria-label="Ver demo de Plataforma Estética Corporativa">Demo →</a>
+                   aria-label="Ver demo de DataLens Analytics">Demo →</a>
                 <a class="project-link"
                    href="https://github.com/Enr1qveDev/Datalens-Analytics"
                    target="_blank"
                    rel="noopener noreferrer"
-                   aria-label="Código fuente de Plataforma Estética en GitHub">GitHub</a>
+                   aria-label="Código fuente de DataLens Analytics en GitHub">GitHub</a>
               </div>
             </div>
           </article>
 
           <article class="project-card reveal reveal-delay-1">
-            <div class="project-img project-img-2 has-image"
-                 style="background-image: url('img/LOGO-CARGANDO-PARA-NUEVA-WEB.jpg');"
+            <div class="project-img project-img-2"
                  aria-hidden="true">
               <div class="project-img-overlay"></div>
             </div>
@@ -397,19 +367,10 @@
               <div class="project-tags">
                 <span class="tag tag-orange">Python</span>
               </div>
-              <h3 class="project-name">Proximo proyecto</h3>
-              <p class="project-desc">En proceso.</p>
+              <h3 class="project-name">Próximo proyecto</h3>
+              <p class="project-desc">Actualmente en desarrollo. Vuelve pronto para ver la demo y el código fuente.</p>
               <div class="project-links">
-                <a class="project-link project-link-primary"
-                   href="URL del repo"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="Ver demo de Plataforma Estética Corporativa">Demo →</a>
-                <a class="project-link"
-                   href="URL del repo"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="Código fuente de Plataforma Estética en GitHub">GitHub</a>
+                <span class="project-link project-link-disabled" aria-disabled="true">// en construcción</span>
               </div>
             </div>
           </article>
@@ -422,7 +383,10 @@
     <section id="contact" aria-label="Contacto">
       <div class="contact-glow" aria-hidden="true"></div>
       <div class="contact-inner container reveal">
-        <p class="section-label">// contacto</p>
+        <div class="section-head section-head--center">
+          <span class="section-index">04</span>
+          <p class="section-label">contacto</p>
+        </div>
         <h2 class="section-title">¿Tienes un proyecto en mente?</h2>
         <p class="contact-desc">Cuéntame qué estás construyendo.</p>
 
@@ -450,19 +414,22 @@
             <span class="form-error" id="message-error"></span>
           </div>
           <button type="submit" class="form-submit">
-            <span class="btn-text">Enviar mensaje &nbsp;🚀</span>
+            <span class="btn-text">Enviar mensaje &nbsp;→</span>
             <span class="btn-loading" hidden>Enviando…</span>
           </button>
         </form>
 
         <div class="social-links" aria-label="Redes sociales">
-          <a class="social-link" href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <!-- TODO: sustituye por tu usuario real de GitHub -->
+          <a class="social-link" href="https://github.com/Enr1qveDev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
           </a>
-          <a class="social-link" href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <!-- TODO: sustituye por tu URL real de LinkedIn -->
+          <a class="social-link" href="https://www.linkedin.com/in/TU-USUARIO" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           </a>
-          <a class="social-link" href="mailto:dev@portfolio.com" aria-label="Enviar email">
+          <!-- TODO: sustituye por tu email real -->
+          <a class="social-link" href="mailto:tu-email-real@ejemplo.com" aria-label="Enviar email">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           </a>
         </div>
@@ -477,7 +444,7 @@
 
   <!-- FOOTER -->
   <footer role="contentinfo">
-    <p>© 2026 <span class="mono-accent">Enrique.Manzanas</span> — Hecho con mucho ☕</p>
+    <p>© 2026 <span class="mono-accent">Enrique.Manzanas</span> — Hecho con mucho café</p>
   </footer>
 
   <!-- Toast notification -->

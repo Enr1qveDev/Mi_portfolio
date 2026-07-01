@@ -2,6 +2,12 @@
    responsive.css — Breakpoints & Mobile Styles
 ═══════════════════════════════════════════════ */
 
+/* ── Base: formulario a 2 columnas en desktop ── */
+.form-row {
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
 /* ─────────────────────────────────────────────
    TABLET  (≤ 900px)
 ───────────────────────────────────────────── */
@@ -13,8 +19,12 @@
 
   .projects-grid {
     grid-template-columns: 1fr;
-    max-width: 520px;
+    max-width: 560px;
     margin-inline: auto;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -31,12 +41,6 @@
   .hero-actions  { flex-direction: column; align-items: center; }
   .btn-primary,
   .btn-outline   { width: 100%; max-width: 280px; justify-content: center; }
-
-  /* About stats */
-  .about-stats   { grid-template-columns: 1fr 1fr; }
-
-  /* Skills */
-  .skills-grid   { grid-template-columns: 1fr; }
 
   /* Contact form */
   .form-row      { grid-template-columns: 1fr; }
@@ -61,11 +65,9 @@
    SMALL MOBILE  (≤ 480px)
 ───────────────────────────────────────────── */
 @media (max-width: 480px) {
-  .about-stats { grid-template-columns: 1fr; }
-
   .hero-headline { letter-spacing: -0.03em; }
 
-  .stat-card { padding: 1.25rem; }
+  .stat-card { padding: 1.5rem 1.25rem; }
 
   .skill-card { padding: 1.25rem; }
 
@@ -78,7 +80,6 @@
    LARGE DESKTOP  (≥ 1400px)
 ───────────────────────────────────────────── */
 @media (min-width: 1400px) {
-  .skills-grid   { grid-template-columns: repeat(3, 1fr); }
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -86,7 +87,6 @@
    HIGH CONTRAST / PRINT
 ───────────────────────────────────────────── */
 @media print {
-  nav, .hero-scroll, .mobile-menu, .toast { display: none; }
+  nav, .hero-scroll, .mobile-menu, .toast, .scroll-to-top-btn { display: none; }
   body { background: white; color: black; }
-  .gradient-text { -webkit-text-fill-color: #7C3AED; }
 }

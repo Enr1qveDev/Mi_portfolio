@@ -15,36 +15,23 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--color-bg);
-  color: var(--color-white);
+  background-color: var(--black);
+  color: var(--white);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
 }
 
-/* Noise texture overlay */
+/* Textura de ruido sutil — da textura de "papel" sin introducir color */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   z-index: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
   pointer-events: none;
-}
-
-/* Grid background */
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  background-image:
-    linear-gradient(var(--color-border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--color-border) 1px, transparent 1px);
-  background-size: 60px 60px;
-  opacity: 0.4;
-  pointer-events: none;
+  mix-blend-mode: overlay;
 }
 
 /* Base elements */
@@ -65,6 +52,9 @@ ul, ol {
 button {
   font-family: inherit;
   cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
 }
 
 input, textarea, select {
@@ -72,6 +62,7 @@ input, textarea, select {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
@@ -79,12 +70,12 @@ h1, h2, h3, h4, h5, h6 {
 
 strong {
   font-weight: 600;
-  color: var(--color-white);
+  color: var(--fg);
 }
 
-/* Focus visible - accessibility */
+/* Focus visible — accesibilidad, monocromo */
 :focus-visible {
-  outline: 2px solid var(--color-violet2);
+  outline: 2px solid var(--fg);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
@@ -101,6 +92,6 @@ strong {
 
 /* Selection */
 ::selection {
-  background: rgba(124, 58, 237, 0.3);
-  color: var(--color-white);
+  background: var(--white);
+  color: var(--black);
 }

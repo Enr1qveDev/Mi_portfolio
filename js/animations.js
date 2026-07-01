@@ -67,8 +67,8 @@
   const nav = document.getElementById('navbar');
   if (!nav) return;
 
-  const SCROLLED_BG    = 'rgba(10,10,15,0.96)';
-  const TRANSPARENT_BG = 'rgba(10,10,15,0.75)';
+  const SCROLLED_BG    = 'rgba(10,10,10,0.94)';
+  const TRANSPARENT_BG = 'rgba(10,10,10,0.78)';
 
   const handleScroll = debounce(() => {
     nav.style.background = window.scrollY > 40 ? SCROLLED_BG : TRANSPARENT_BG;
@@ -113,6 +113,38 @@
   }
 
   animate();
+})();
+
+/* ─────────────────────────────────────────────
+   LAZY LOAD — Project images (data-bg → background-image)
+───────────────────────────────────────────── */
+(function initLazyImages() {
+  const targets = document.querySelectorAll('[data-bg]');
+  if (!targets.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    // Fallback sin soporte: cargar todo de inmediato
+    targets.forEach(el => {
+      el.style.backgroundImage = `url('${el.dataset.bg}')`;
+      el.removeAttribute('data-bg');
+    });
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        el.style.backgroundImage = `url('${el.dataset.bg}')`;
+        el.removeAttribute('data-bg');
+        observer.unobserve(el);
+      });
+    },
+    { rootMargin: '200px 0px' }
+  );
+
+  targets.forEach(el => observer.observe(el));
 })();
 
 /* ─────────────────────────────────────────────

@@ -8,6 +8,9 @@
   const form = document.getElementById('contactForm');
   if (!form) return;
 
+  // TODO: sustituye por tu email real (debe coincidir con el del footer/redes)
+  const CONTACT_EMAIL = 'tu-email-real@ejemplo.com';
+
   /* ── Field rules ── */
   const rules = {
     name:    { required: true, minLength: 2, label: 'Nombre' },
@@ -76,7 +79,7 @@
   });
 
   /* ── Submit handler ── */
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     if (!validateAll()) return;
@@ -85,28 +88,41 @@
     const btnText    = submitBtn.querySelector('.btn-text');
     const btnLoading = submitBtn.querySelector('.btn-loading');
 
-    // Loading state
+    const data = {
+      name:    form.elements.name.value.trim(),
+      email:   form.elements.email.value.trim(),
+      subject: form.elements.subject.value.trim(),
+      message: form.elements.message.value.trim(),
+    };
+
+    // Loading state (breve, para feedback visual antes de abrir el cliente de correo)
     submitBtn.disabled = true;
     btnText.hidden     = true;
     btnLoading.hidden  = false;
 
     try {
-      // Simulate network request (replace with real fetch in production)
-      await new Promise(resolve => setTimeout(resolve, 1400));
+      const mailSubject = encodeURIComponent(`[Portfolio] ${data.subject}`);
+      const mailBody    = encodeURIComponent(
+        `Nombre: ${data.name}\nEmail: ${data.email}\n\n${data.message}`
+      );
+      const mailtoLink  = `mailto:${CONTACT_EMAIL}?subject=${mailSubject}&body=${mailBody}`;
 
-      // Success
-      showToast('✅  Mensaje enviado. ¡Te respondo pronto!');
+      window.location.href = mailtoLink;
+
+      showToast('Abriendo tu cliente de correo…');
       form.reset();
       Object.keys(rules).forEach(name => showError(name, ''));
 
     } catch (err) {
-      showToast('❌  Algo salió mal. Inténtalo de nuevo.');
+      showToast('Algo salió mal. Inténtalo de nuevo.');
       console.error('Form submission error:', err);
 
     } finally {
-      submitBtn.disabled = false;
-      btnText.hidden     = false;
-      btnLoading.hidden  = true;
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        btnText.hidden     = false;
+        btnLoading.hidden  = true;
+      }, 600);
     }
   });
 })();

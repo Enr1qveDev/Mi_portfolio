@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://enr1qvedev.github.io/Mi_portfolio/sitemap.xml
