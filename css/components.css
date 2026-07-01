@@ -192,8 +192,8 @@
   position: absolute;
   left: 0.05em;
   right: 0.05em;
-  bottom: 0.06em;
-  height: 0.1em;
+  bottom: -0.12em;
+  height: 0.07em;
   background: var(--blue-light);
   opacity: 0.55;
 }
